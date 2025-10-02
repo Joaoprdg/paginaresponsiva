@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,39 +6,117 @@
   }
   
   body {
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: sans-serif;
   }
   
-  .menu {
+  #tudo {
+    width: 100%;
+  }
+  
+  #um {
+    background-color: rgb(207, 250, 107);
+    width: 100%;
+    height: 15vw;
+    min-height: 80px;
+  }
+  
+  #linha {
     display: flex;
-    gap: 2vw;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
   }
   
-  .item {
-    width: 120px;
-    height: 120px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
+  #dois, #sete {
+    flex: 1 1 200px;
+    min-height: 300px;
+    background-color: rgb(195, 253, 190);
+    background-image: url("https://media.istockphoto.com/id/1303915114/pt/foto/poker-table-felt-background-in-green-color.jpg?s=612x612&w=0&k=20&c=K4iHDuuAdZuDaV82DqtHDne7xJqvZqIgrhGeynOUpn8=");
+    background-size: cover;
+    background-position: center;
   }
   
-  .item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  #div1, #div2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    align-items: center;
+    gap: 1rem;
+  }
+  #tres, #quatro, #cinco, #seis {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 3 / 4;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
   }
   
-  @media (max-width: 600px) {
-    .menu {
+  #tres {
+    background-image: url("https://i.redd.it/why-does-bro-look-like-the-goku-prowler-meme-v0-5ufcl3hqsh2e1.jpg?width=475&format=pjpg&auto=webp&s=795e967a163eafe628fb8624d9a04d17d3b5830b");
+  }
+  #quatro {
+    background-image: url("https://img1.picmix.com/output/stamp/normal/1/4/3/7/2757341_05372.png");
+  }
+  #cinco {
+    background-image: url("https://static.wikia.nocookie.net/bindingofisaac/images/a/a0/IsaacHD.png/revision/latest/thumbnail/width/360/height/450?cb=20120617101324");
+  }
+  #seis {
+    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."); /* encurtado para visualização */
+  }
+  
+  @media (max-width: 1024px) {
+    #um {
+      height: 120px;
+    }
+  
+    #linha {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    #dois,
+    #sete {
+      flex: 1 1 150px;
+      min-height: 250px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #linha {
       flex-direction: column;
       align-items: center;
+    }
+  
+    #dois,
+    #sete {
+      width: 100%;
+      height: 200px;
+    }
+  
+    #div1,
+    #div2 {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    #tres,
+    #quatro,
+    #cinco,
+    #seis {
+      max-width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #tres,
+    #quatro,
+    #cinco,
+    #seis {
+      max-width: 100%;
     }
   }
   
